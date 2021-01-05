@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: heartbeat-config
+stringData:
+  beat.yml: |-
+    heartbeat.config.monitors:
+      reload.enabled: true
+      reload.period: 1m
+    processors:
+    - add_observer_metadata:
+        geo:
+          name: us-east-1
+          location: 37.444167, -76.406389
+          continent_name: North America
+          country_iso_code: US
+          region_name: us-east-1
+          region_iso_code: VA
+          city_name: North Virginia
+    heartbeat.monitors:
+    - type: tcp
+      id: elasticsearch-cluster
+      name: Elasticsearch Service
+      schedule: '@every 30s'
+      hosts: ["elasticsearch-cluster-es-http.default.svc:9200"]
+    - type: http
+      id: google
+      name: Google 
+      schedule: '@every 30s'
+      hosts: ["https://www.google.com"]

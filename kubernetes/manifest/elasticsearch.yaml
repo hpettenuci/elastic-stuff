@@ -1,0 +1,36 @@
+apiVersion: elasticsearch.k8s.elastic.co/v1 
+kind: Elasticsearch
+metadata:
+  name: elasticsearch-cluster
+spec:
+  version: 7.10.1
+  nodeSets:
+  - name: full
+    count: 1
+    config:
+      node.store.allow_mmap: false
+      node.roles: ["master","data","ingest","ml","transform"]      
+      cluster.name: eck-cluster
+    podTemplate:
+      spec:
+        containers:
+        - name: elasticsearch
+          env:
+          - name: ES_JAVA_OPTS
+            value: -Xms1g -Xmx1g
+          resources:
+            requests:
+              memory: 2Gi
+              cpu: 2
+            limits:
+              memory: 2Gi
+    volumeClaimTemplates:
+    - metadata: 
+        name: elasticsearch-data
+      spec: 
+        accessModes:
+        - ReadWriteOnce
+        resources:
+          requests:
+            storage: 5Gi
+        storageClassName: hostpath

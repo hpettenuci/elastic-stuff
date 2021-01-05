@@ -1,0 +1,23 @@
+apiVersion: kibana.k8s.elastic.co/v1
+kind: Kibana
+metadata: 
+  name: kibana-cluster
+spec:
+  version: 7.10.1
+  count: 1
+  elasticsearchRef:
+      name: elasticsearch-cluster
+      namespace: default
+  secureSettings:
+  - secretName: kibana-secret-settings
+  podTemplate:
+    spec:
+      containers:
+      - name: kibana
+        resources:
+          requests:
+            memory: 1Gi
+            cpu: 0.5
+          limits:
+            memory: 2Gi
+            cpu: 1
