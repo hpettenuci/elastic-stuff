@@ -1,3 +1,5 @@
+![CodeQL](https://github.com/hpettenuci/elastic-stuff/workflows/CodeQL/badge.svg?branch=main)  [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-blue.svg)](https://conventionalcommits.org)
+
 # Elastic Repository
 I love to spend some time working and researching tools provided by [Elastic.co](http://elastic.co)! For this reason I started to organize this repository with my scripts and  implementations of Elastic Solutions.
 
@@ -8,9 +10,6 @@ I have been working with Elastic in different kind of environments but the conta
 
 ## Tools
 Elastic solutions have a lot of features and sometimes you need some tools will help to do something. In this session you will find some simple tools developed to help in specific tasks.
-
-## Sample Data
-
 
 ## Elasticsearch API commands and Sample Data
 - sample-data folder contains a collection that will be usefull to exeute query examples.

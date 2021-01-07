@@ -17,17 +17,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add VSCode configuration.
 - Provide ElasticSearch api commands examples for elasticsearch-api.
 
-## [0.1.0] - 2021-01-07
-### Added
-- Add sample data files for sample-data.
-
-### Fixed
-- Correct sintax error on startup script for kubernetes.
-
-### Changed
-- Add VSCode configuration.
-- Provide ElasticSearch api commands examples for elasticsearch-api.
-
 ## [0.0.1] - 2021-01-05
 ### Added
 - Initial Commit.
