@@ -1,0 +1,15 @@
+{
+    "editor.fontFamily": "'Fira Code',Consolas, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "explorer.sortOrder": "type",
+    "files.trimFinalNewlines": true,
+    "workbench.editor.highlightModifiedTabs": true,
+    "conventionalCommits.scopes": [
+        "docker",
+        "elasticsearch-api",
+        "kubernets",
+        "sample-data",
+        "tools"
+    ],
+    "conventionalCommits.autoCommit": false
+}
