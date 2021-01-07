@@ -29,11 +29,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Provide ElasticSearch api commands examples for elasticsearch-api.
 
 ## [0.0.1] - 2021-01-05
-### Changed
+### Added
 - Initial Commit.
-- Initial commit.
+
 
 [Unreleased]: https://github.com/hpettenuci/elastic-stuff/compare/0.1.0...HEAD
-[0.1.0]: https://github.com/hpettenuci/elastic-stuff/compare/0.0.1...0.1.0
 [0.1.0]: https://github.com/hpettenuci/elastic-stuff/compare/0.0.1...0.1.0
 [0.0.1]: https://github.com/hpettenuci/elastic-stuff/releases/tag/0.0.1
