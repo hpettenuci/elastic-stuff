@@ -25,7 +25,7 @@ if [ "${START_ELASTICSEARCH}" == "Y" ]; then
     # Get generated password from secrets
     PASSWORD=$(kubectl get secret ${ES_PREFIX}-es-elastic-user -o go-template='{{.data.elastic | base64decode}}')
 
-    if [ "${USE_LOCALHOST}" == "Y "]; then
+    if [ "${USE_LOCALHOST}" == "Y" ]; then
         # Creating local service redirect
         kubectl port-forward service/${ES_PREFIX}-es-http 9200 &        
         
@@ -50,7 +50,7 @@ if [ "${START_KIBANA}" == "Y" ]; then
     # Get ClusterIP info
     KB_CLUSTER_IP=$(kubectl get service ${KB_PREFIX}-kb-http -o go-template='{{.spec.externalIp}}')
 
-    if [ "${USE_LOCALHOST}" == "Y "]; then
+    if [ "${USE_LOCALHOST}" == "Y" ]; then
         # Creating local service redirect
         kubectl port-forward service/${KB_PREFIX}-kb-http 5601 &
         KB_CLUSTER_IP="localhost"
@@ -75,7 +75,7 @@ if [ "${START_APM}" == "Y" ]; then
     # Get ClusterIP info
     APM_CLUSTER_IP=$(kubectl get service ${APM_PREFIX}-kb-http -o go-template='{{.spec.externalIp}}')
 
-        if [ "${USE_LOCALHOST}" == "Y "]; then
+        if [ "${USE_LOCALHOST}" == "Y" ]; then
         # Creating local service redirect
         kubectl port-forward service/${APM_PREFIX}-apm-http 5601 &
         KB_CLUSTER_IP="localhost"
